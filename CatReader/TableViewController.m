@@ -7,6 +7,7 @@
 //
 
 #import "TableViewController.h"
+#import "DetailViewController.h"
 #import "CatBook.h"
 
 
@@ -90,6 +91,21 @@
 
 #pragma mark - Segues
 
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if ([segue.identifier isEqual:@"showDetailView"]) {
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        CatBook *adoptionPost = [self.catsArray objectAtIndex:indexPath.row];
+        [segue.destinationViewController setImageURL:adoptionPost.catImageURL];
+    
+            
+        }
+    
+    
+}
 
 
 @end
