@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TableViewController.h
 //  CatReader
 //
 //  Created by Shan Rammah on 1/10/16.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface TableViewController : UITableViewController
 
+@property (nonatomic, strong) NSMutableArray *catsArray;
 
 @end
-

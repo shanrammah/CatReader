@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		74DDF49F1C431DCC005128E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDF49E1C431DCC005128E8 /* main.m */; };
 		74DDF4A21C431DCC005128E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDF4A11C431DCC005128E8 /* AppDelegate.m */; };
-		74DDF4A51C431DCC005128E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDF4A41C431DCC005128E8 /* ViewController.m */; };
-		74DDF4A81C431DCC005128E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DDF4A61C431DCC005128E8 /* Main.storyboard */; };
 		74DDF4AA1C431DCC005128E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74DDF4A91C431DCC005128E8 /* Assets.xcassets */; };
 		74DDF4AD1C431DCC005128E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DDF4AB1C431DCC005128E8 /* LaunchScreen.storyboard */; };
 		74DDF4B81C431DCD005128E8 /* CatReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDF4B71C431DCD005128E8 /* CatReaderTests.m */; };
 		74DDF4C31C431DCD005128E8 /* CatReaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDF4C21C431DCD005128E8 /* CatReaderUITests.m */; };
+		74DDF4D81C431ECF005128E8 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDF4D71C431ECF005128E8 /* TableViewController.m */; };
+		74DDF4DB1C431FBD005128E8 /* CatBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDF4DA1C431FBD005128E8 /* CatBook.m */; };
+		74DDF4DD1C4329EE005128E8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DDF4DC1C4329EE005128E8 /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +40,6 @@
 		74DDF49E1C431DCC005128E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		74DDF4A01C431DCC005128E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		74DDF4A11C431DCC005128E8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		74DDF4A31C431DCC005128E8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		74DDF4A41C431DCC005128E8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		74DDF4A71C431DCC005128E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74DDF4A91C431DCC005128E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74DDF4AC1C431DCC005128E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74DDF4AE1C431DCC005128E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +49,11 @@
 		74DDF4BE1C431DCD005128E8 /* CatReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DDF4C21C431DCD005128E8 /* CatReaderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CatReaderUITests.m; sourceTree = "<group>"; };
 		74DDF4C41C431DCD005128E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74DDF4D61C431ECF005128E8 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		74DDF4D71C431ECF005128E8 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		74DDF4D91C431FBD005128E8 /* CatBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatBook.h; sourceTree = "<group>"; };
+		74DDF4DA1C431FBD005128E8 /* CatBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatBook.m; sourceTree = "<group>"; };
+		74DDF4DC1C4329EE005128E8 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +104,11 @@
 		74DDF49C1C431DCC005128E8 /* CatReader */ = {
 			isa = PBXGroup;
 			children = (
-				74DDF4A01C431DCC005128E8 /* AppDelegate.h */,
-				74DDF4A11C431DCC005128E8 /* AppDelegate.m */,
-				74DDF4A31C431DCC005128E8 /* ViewController.h */,
-				74DDF4A41C431DCC005128E8 /* ViewController.m */,
-				74DDF4A61C431DCC005128E8 /* Main.storyboard */,
+				74DDF4D91C431FBD005128E8 /* CatBook.h */,
+				74DDF4DA1C431FBD005128E8 /* CatBook.m */,
+				74DDF4D61C431ECF005128E8 /* TableViewController.h */,
+				74DDF4D71C431ECF005128E8 /* TableViewController.m */,
+				74DDF4DC1C4329EE005128E8 /* MainStoryboard.storyboard */,
 				74DDF4A91C431DCC005128E8 /* Assets.xcassets */,
 				74DDF4AB1C431DCC005128E8 /* LaunchScreen.storyboard */,
 				74DDF4AE1C431DCC005128E8 /* Info.plist */,
@@ -117,6 +120,8 @@
 		74DDF49D1C431DCC005128E8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				74DDF4A01C431DCC005128E8 /* AppDelegate.h */,
+				74DDF4A11C431DCC005128E8 /* AppDelegate.m */,
 				74DDF49E1C431DCC005128E8 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -243,9 +248,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74DDF4DD1C4329EE005128E8 /* MainStoryboard.storyboard in Resources */,
 				74DDF4AD1C431DCC005128E8 /* LaunchScreen.storyboard in Resources */,
 				74DDF4AA1C431DCC005128E8 /* Assets.xcassets in Resources */,
-				74DDF4A81C431DCC005128E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74DDF4A51C431DCC005128E8 /* ViewController.m in Sources */,
 				74DDF4A21C431DCC005128E8 /* AppDelegate.m in Sources */,
 				74DDF49F1C431DCC005128E8 /* main.m in Sources */,
+				74DDF4D81C431ECF005128E8 /* TableViewController.m in Sources */,
+				74DDF4DB1C431FBD005128E8 /* CatBook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,14 +314,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		74DDF4A61C431DCC005128E8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				74DDF4A71C431DCC005128E8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		74DDF4AB1C431DCC005128E8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
