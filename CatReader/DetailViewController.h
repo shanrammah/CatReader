@@ -19,6 +19,7 @@
 @property (weak, nonatomic) NSString *catName;
 @property (strong, nonatomic) NSString *catDescription;
 @property (strong, nonatomic) IBOutlet UILabel *catDescriptionLabel;
+@property (strong, nonatomic) NSURL *adoptionPostURL;
 
 
 @end

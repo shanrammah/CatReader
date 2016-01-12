@@ -44,8 +44,9 @@
         adoptionPost.thumbnailImage = [apDictionary objectForKey:@"ThumbnailImage"];
         adoptionPost.imageURL = [adoptionPost.thumbnailImage objectForKey:@"src"];
         adoptionPost.name = [apDictionary objectForKey:@"Name"];
-        adoptionPost.catName = [adoptionPost.name objectAtIndex:0];
-        adoptionPost.catDescription = [apDictionary objectForKey:@"description"];
+        adoptionPost.petName = [adoptionPost.name objectAtIndex:0];
+        adoptionPost.petDescription = [apDictionary objectForKey:@"description"];
+        adoptionPost.petCode = [adoptionPost.name objectAtIndex:1];
         
         [self.catsArray addObject:adoptionPost];
         
@@ -84,13 +85,13 @@
         cell.imageView.image = image;
     }
 
-        cell.textLabel.text = adoptionPost.catName;
+        cell.textLabel.text = adoptionPost.petName;
         // cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", blogPost.author, blogPost.date];
         
         return cell;
 }
 
-#pragma mark - Segues
+#pragma mark - Navigation
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -101,9 +102,9 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         CatBook *adoptionPost = [self.catsArray objectAtIndex:indexPath.row];
         [segue.destinationViewController setImageURL:adoptionPost.catImageURL];
-        [segue.destinationViewController setCatName:adoptionPost.catName];
-        [segue.destinationViewController setCatDescription:adoptionPost.catDescription];
-        
+        [segue.destinationViewController setCatName:adoptionPost.petName];
+        [segue.destinationViewController setCatDescription:adoptionPost.petDescription];
+        [segue.destinationViewController setAdoptionPostURL:adoptionPost.adoptionPostURL];
 
         }
     

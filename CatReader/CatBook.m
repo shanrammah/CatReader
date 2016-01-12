@@ -16,5 +16,12 @@
 }
 
 
+- (NSURL *)adoptionPostURL
+{
+        NSString *defaultURL = @"http://www.oregonhumane.org/adopt/details/";
+        NSString *adoptionPostURLString = [defaultURL stringByAppendingString:self.petCode];
+        return [NSURL URLWithString:adoptionPostURLString];
+}
+
 
 @end

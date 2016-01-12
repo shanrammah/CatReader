@@ -17,6 +17,7 @@
 		74DDF4DB1C431FBD005128E8 /* CatBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDF4DA1C431FBD005128E8 /* CatBook.m */; };
 		74DDF4DD1C4329EE005128E8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DDF4DC1C4329EE005128E8 /* MainStoryboard.storyboard */; };
 		74DDF4E01C433862005128E8 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDF4DF1C433862005128E8 /* DetailViewController.m */; };
+		74DDF4E31C44C51C005128E8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDF4E21C44C51C005128E8 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		74DDF4DC1C4329EE005128E8 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		74DDF4DE1C433862005128E8 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		74DDF4DF1C433862005128E8 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		74DDF4E11C44C51C005128E8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		74DDF4E21C44C51C005128E8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				74DDF4D71C431ECF005128E8 /* TableViewController.m */,
 				74DDF4DE1C433862005128E8 /* DetailViewController.h */,
 				74DDF4DF1C433862005128E8 /* DetailViewController.m */,
+				74DDF4E11C44C51C005128E8 /* WebViewController.h */,
+				74DDF4E21C44C51C005128E8 /* WebViewController.m */,
 				74DDF4DC1C4329EE005128E8 /* MainStoryboard.storyboard */,
 				74DDF4A91C431DCC005128E8 /* Assets.xcassets */,
 				74DDF4AB1C431DCC005128E8 /* LaunchScreen.storyboard */,
@@ -281,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74DDF4E01C433862005128E8 /* DetailViewController.m in Sources */,
+				74DDF4E31C44C51C005128E8 /* WebViewController.m in Sources */,
 				74DDF4A21C431DCC005128E8 /* AppDelegate.m in Sources */,
 				74DDF49F1C431DCC005128E8 /* main.m in Sources */,
 				74DDF4D81C431ECF005128E8 /* TableViewController.m in Sources */,
