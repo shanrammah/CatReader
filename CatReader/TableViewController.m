@@ -21,37 +21,42 @@
 {
     [super viewDidLoad];
     
-    NSLog(@"viewDidLoad");
     
     NSURL *apiURL = [NSURL URLWithString:@"http://www.kimonolabs.com/api/9hsr61i4?apikey=ViFuIaesOusUCdWE4Kl85HwLYp2GYgth"];
     
-    NSData *jsonData = [NSData dataWithContentsOfURL:apiURL];
+    NSURLSession *session = [NSURLSession sharedSession];
     
-    NSError *error = nil;
-    
-    NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error]; //you have to pass the reference for an error
-    //NSLog(@"%@", dataDictionary);
-    
-    self.catsArray = [[NSMutableArray alloc] init]; 
-    
-    //NSLog(@"cats array: %@", self.catsArray);
-
-    NSDictionary *adoptionPostsDictionary = [dataDictionary objectForKey:@"results"];
-    NSArray *adoptionPostsArray = [adoptionPostsDictionary objectForKey:@"collection1"];
-    
-    for (NSDictionary *apDictionary in adoptionPostsArray) {
-        CatBook *adoptionPost = [[CatBook alloc] init];
-        adoptionPost.petImageURLDictionary = [apDictionary objectForKey:@"ThumbnailImage"];
-        adoptionPost.imageURL = [adoptionPost.petImageURLDictionary objectForKey:@"src"];
-        adoptionPost.petDetailsArray = [apDictionary objectForKey:@"Name"];
-        adoptionPost.petName = [adoptionPost.petDetailsArray objectAtIndex:0];
-        adoptionPost.petDescription = [apDictionary objectForKey:@"description"];
-        adoptionPost.petCode = [adoptionPost.petDetailsArray objectAtIndex:1];
+    NSURLSessionDownloadTask *task = [session downloadTaskWithURL:apiURL completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
-        [self.catsArray addObject:adoptionPost];
+        NSData *jsonData = [[NSData alloc] initWithContentsOfURL:location];
+        
+        NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+    
+        self.catsArray = [[NSMutableArray alloc] init];
+    
+        //NSLog(@"cats array: %@", self.catsArray);
+
+        NSDictionary *adoptionPostsDictionary = [dataDictionary objectForKey:@"results"];
+        NSArray *adoptionPostsArray = [adoptionPostsDictionary objectForKey:@"collection1"];
+    
+        for (NSDictionary *apDictionary in adoptionPostsArray) {
+            CatBook *adoptionPost = [[CatBook alloc] init];
+            adoptionPost.petImageURLDictionary = [apDictionary objectForKey:@"ThumbnailImage"];
+            adoptionPost.imageURL = [adoptionPost.petImageURLDictionary objectForKey:@"src"];
+            adoptionPost.petDetailsArray = [apDictionary objectForKey:@"Name"];
+            adoptionPost.petName = [adoptionPost.petDetailsArray objectAtIndex:0];
+            adoptionPost.petDescription = [apDictionary objectForKey:@"description"];
+            adoptionPost.petCode = [adoptionPost.petDetailsArray objectAtIndex:1];
+        
+            [self.catsArray addObject:adoptionPost];
         
     }
-
+    
+        dispatch_async(dispatch_get_main_queue(), ^ {
+            [self.tableView reloadData];
+        });
+    }];
+    [task resume];
     
 }
 
@@ -78,6 +83,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     CatBook *adoptionPost = [self.catsArray objectAtIndex:indexPath.row];
+    
 
     if( [adoptionPost.imageURL isKindOfClass:[NSString class]]) {
         NSData *imageData = [NSData dataWithContentsOfURL:adoptionPost.petImageURL];
