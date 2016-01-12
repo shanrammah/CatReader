@@ -16,7 +16,9 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *detailCatImage;
 @property (strong, nonatomic) NSURL *imageURL;
-
+@property (weak, nonatomic) NSString *catName;
+@property (strong, nonatomic) NSString *catDescription;
+@property (strong, nonatomic) IBOutlet UILabel *catDescriptionLabel;
 
 
 @end

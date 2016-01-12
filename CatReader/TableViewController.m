@@ -30,11 +30,11 @@
     NSError *error = nil;
     
     NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error]; //you have to pass the reference for an error
-    // NSLog(@"%@", dataDictionary);
+    //NSLog(@"%@", dataDictionary);
     
     self.catsArray = [[NSMutableArray alloc] init]; //blogPosts
     
-    NSLog(@"cats array: %@", self.catsArray);
+    //NSLog(@"cats array: %@", self.catsArray);
 
     NSDictionary *adoptionPostsDictionary = [dataDictionary objectForKey:@"results"];
     NSArray *adoptionPostsArray = [adoptionPostsDictionary objectForKey:@"collection1"];
@@ -45,6 +45,7 @@
         adoptionPost.imageURL = [adoptionPost.thumbnailImage objectForKey:@"src"];
         adoptionPost.name = [apDictionary objectForKey:@"Name"];
         adoptionPost.catName = [adoptionPost.name objectAtIndex:0];
+        adoptionPost.catDescription = [apDictionary objectForKey:@"description"];
         
         [self.catsArray addObject:adoptionPost];
         
@@ -100,8 +101,10 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         CatBook *adoptionPost = [self.catsArray objectAtIndex:indexPath.row];
         [segue.destinationViewController setImageURL:adoptionPost.catImageURL];
-    
-            
+        [segue.destinationViewController setCatName:adoptionPost.catName];
+        [segue.destinationViewController setCatDescription:adoptionPost.catDescription];
+        
+
         }
     
     

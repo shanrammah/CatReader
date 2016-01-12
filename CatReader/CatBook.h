@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSArray *name;
 @property (nonatomic, strong) NSString *catName;
 @property (nonatomic, strong) NSString *imageURL;
+@property (nonatomic, strong) NSString *catDescription;
 
 - (NSURL *)catImageURL;
 

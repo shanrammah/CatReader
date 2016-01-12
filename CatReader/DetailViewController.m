@@ -22,6 +22,12 @@
     UIImage *image = [[UIImage alloc] initWithData:imageData];
     self.detailCatImage.image = image;
     
+    self.navigationItem.title = self.catName;
+    
+    NSLog(@" %@", self.catDescription); 
+    
+    self.catDescriptionLabel.text = self.catDescription;
+    
 }
 
 - (void)didReceiveMemoryWarning {
