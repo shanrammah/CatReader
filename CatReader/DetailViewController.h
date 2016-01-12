@@ -8,17 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@class CatBook;
+
 
 @interface DetailViewController : UIViewController
 
-@property (strong, nonatomic) CatBook *catBook;
 
-@property (weak, nonatomic) IBOutlet UIImageView *detailCatImage;
+
+@property (weak, nonatomic) IBOutlet UIImageView *detailPetImage;
 @property (strong, nonatomic) NSURL *imageURL;
-@property (weak, nonatomic) NSString *catName;
-@property (strong, nonatomic) NSString *catDescription;
-@property (strong, nonatomic) IBOutlet UILabel *catDescriptionLabel;
+@property (weak, nonatomic) NSString *petName;
+@property (strong, nonatomic) NSString *petDescription;
+@property (strong, nonatomic) IBOutlet UILabel *petDescriptionLabel;
 @property (strong, nonatomic) NSURL *adoptionPostURL;
 
 

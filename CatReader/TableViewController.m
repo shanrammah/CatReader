@@ -32,7 +32,7 @@
     NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error]; //you have to pass the reference for an error
     //NSLog(@"%@", dataDictionary);
     
-    self.catsArray = [[NSMutableArray alloc] init]; //blogPosts
+    self.catsArray = [[NSMutableArray alloc] init]; 
     
     //NSLog(@"cats array: %@", self.catsArray);
 
@@ -41,12 +41,12 @@
     
     for (NSDictionary *apDictionary in adoptionPostsArray) {
         CatBook *adoptionPost = [[CatBook alloc] init];
-        adoptionPost.thumbnailImage = [apDictionary objectForKey:@"ThumbnailImage"];
-        adoptionPost.imageURL = [adoptionPost.thumbnailImage objectForKey:@"src"];
-        adoptionPost.name = [apDictionary objectForKey:@"Name"];
-        adoptionPost.petName = [adoptionPost.name objectAtIndex:0];
+        adoptionPost.petImageURLDictionary = [apDictionary objectForKey:@"ThumbnailImage"];
+        adoptionPost.imageURL = [adoptionPost.petImageURLDictionary objectForKey:@"src"];
+        adoptionPost.petDetailsArray = [apDictionary objectForKey:@"Name"];
+        adoptionPost.petName = [adoptionPost.petDetailsArray objectAtIndex:0];
         adoptionPost.petDescription = [apDictionary objectForKey:@"description"];
-        adoptionPost.petCode = [adoptionPost.name objectAtIndex:1];
+        adoptionPost.petCode = [adoptionPost.petDetailsArray objectAtIndex:1];
         
         [self.catsArray addObject:adoptionPost];
         
@@ -80,7 +80,7 @@
     CatBook *adoptionPost = [self.catsArray objectAtIndex:indexPath.row];
 
     if( [adoptionPost.imageURL isKindOfClass:[NSString class]]) {
-        NSData *imageData = [NSData dataWithContentsOfURL:adoptionPost.catImageURL];
+        NSData *imageData = [NSData dataWithContentsOfURL:adoptionPost.petImageURL];
         UIImage *image = [[UIImage alloc] initWithData:imageData];
         cell.imageView.image = image;
     }
@@ -101,9 +101,9 @@
         
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         CatBook *adoptionPost = [self.catsArray objectAtIndex:indexPath.row];
-        [segue.destinationViewController setImageURL:adoptionPost.catImageURL];
-        [segue.destinationViewController setCatName:adoptionPost.petName];
-        [segue.destinationViewController setCatDescription:adoptionPost.petDescription];
+        [segue.destinationViewController setImageURL:adoptionPost.petImageURL];
+        [segue.destinationViewController setPetName:adoptionPost.petName];
+        [segue.destinationViewController setPetDescription:adoptionPost.petDescription];
         [segue.destinationViewController setAdoptionPostURL:adoptionPost.adoptionPostURL];
 
         }

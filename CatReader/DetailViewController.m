@@ -20,13 +20,13 @@
     
     NSData *imageData = [NSData dataWithContentsOfURL:self.imageURL];
     UIImage *image = [[UIImage alloc] initWithData:imageData];
-    self.detailCatImage.image = image;
+    self.detailPetImage.image = image;
     
-    self.navigationItem.title = self.catName;
+    self.navigationItem.title = self.petName;
     
-    NSLog(@" %@", self.catDescription); 
+    NSLog(@" %@", self.petDescription);
     
-    self.catDescriptionLabel.text = self.catDescription;
+    self.petDescriptionLabel.text = self.petDescription;
     
 }
 

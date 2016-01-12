@@ -11,8 +11,8 @@
 @interface CatBook : NSObject
 
 @property (nonatomic, strong) NSArray *collection1;
-@property (nonatomic, strong) NSDictionary *thumbnailImage;
-@property (nonatomic, strong) NSArray *name;
+@property (nonatomic, strong) NSDictionary *petImageURLDictionary;
+@property (nonatomic, strong) NSArray *petDetailsArray;
 @property (nonatomic, strong) NSString *petName;
 @property (nonatomic, strong) NSString *imageURL;
 @property (nonatomic, strong) NSString *petDescription;
@@ -21,7 +21,7 @@
 
 - (NSURL *)adoptionPostURL;
 
-- (NSURL *)catImageURL;
+- (NSURL *)petImageURL;
 
 
 

@@ -77,8 +77,8 @@
                     <navigationItem key="navigationItem" title="Title" id="ehh-mT-6uL"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="catDescriptionLabel" destination="Rju-Fl-rwx" id="tEx-gF-S0l"/>
-                        <outlet property="detailCatImage" destination="xzO-wg-8T6" id="2Jr-Cg-poa"/>
+                        <outlet property="detailPetImage" destination="xzO-wg-8T6" id="hd9-7d-3fV"/>
+                        <outlet property="petDescriptionLabel" destination="Rju-Fl-rwx" id="eVC-KF-fdo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H1L-Ie-6uc" userLabel="First Responder" sceneMemberID="firstResponder"/>
