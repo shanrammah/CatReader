@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewController : UITableViewController
+@interface TableViewController : UITableViewController <NSURLConnectionDataDelegate>
 
-@property (nonatomic, strong) NSMutableArray *catsArray;
+
+
 
 @end
